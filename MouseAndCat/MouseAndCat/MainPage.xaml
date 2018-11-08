@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MouseAndCat"
+             x:Class="MouseAndCat.MainPage">
+
+    <!-- create a grid, in design time and runtime -->
+    <StackLayout x:Name="slContent">
+        <!-- Tables in html - same -->
+        <Grid x:Name="grdDesign" IsVisible="False" 
+              HeightRequest="400" WidthRequest="400" 
+              HorizontalOptions="Center" VerticalOptions="Center" >
+            <!-- add rows and columns -->
+            <Grid.ColumnDefinitions>
+                <!--<ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />-->
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <!-- content of the grid -->
+            <Frame x:Name="frm_R0_C0" BackgroundColor="Black" 
+                   Grid.Row="0" Grid.Column="0" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                          NumberOfTapsRequired="1"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="1" />
+            <BoxView BackgroundColor="Black" Grid.Row="0" Grid.Column="2" />
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="3" />
+            <BoxView BackgroundColor="White" Grid.Row="1" Grid.Column="0"/>
+            <BoxView BackgroundColor="Black" Grid.Row="1" Grid.Column="1" />
+            <BoxView BackgroundColor="White" Grid.Row="1" Grid.Column="2" />
+            <BoxView BackgroundColor="Black" Grid.Row="1" Grid.Column="3" />
+            <BoxView BackgroundColor="Black" Grid.Row="2" Grid.Column="0"/>
+            <BoxView BackgroundColor="White" Grid.Row="2" Grid.Column="1" />
+            <BoxView BackgroundColor="Black" Grid.Row="2" Grid.Column="2" />
+            <BoxView BackgroundColor="White" Grid.Row="2" Grid.Column="3" />
+            <BoxView BackgroundColor="White" Grid.Row="3" Grid.Column="0"/>
+            <BoxView BackgroundColor="Black" Grid.Row="3" Grid.Column="1" />
+            <BoxView BackgroundColor="White" Grid.Row="3" Grid.Column="2" />
+            <BoxView BackgroundColor="Black" Grid.Row="3" Grid.Column="3" />
+        </Grid>
+
+        <StackLayout BackgroundColor="BlueViolet"
+                     HorizontalOptions="Center" VerticalOptions="Center" >
+            <Frame BackgroundColor="Yellow" Margin="10" >
+                <Grid x:Name="grdRuntime">
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+        
+    </StackLayout>
+    
+</ContentPage>
