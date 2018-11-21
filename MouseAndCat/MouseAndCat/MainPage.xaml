@@ -32,7 +32,7 @@
             <Frame x:Name="frm_R0_C0" BackgroundColor="Black" 
                    Grid.Row="0" Grid.Column="0" >
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                    <TapGestureRecognizer Tapped="EmptySquare_Tapped"
                                           NumberOfTapsRequired="1"/>
                 </Frame.GestureRecognizers>
             </Frame>
@@ -55,10 +55,8 @@
 
         <StackLayout BackgroundColor="BlueViolet"
                      HorizontalOptions="Center" VerticalOptions="Center" >
-            <Frame BackgroundColor="Yellow" Margin="10" >
-                <Grid x:Name="grdRuntime">
-                </Grid>
-            </Frame>
+            <Grid x:Name="grdRuntime">
+            </Grid>
 
         </StackLayout>
         
